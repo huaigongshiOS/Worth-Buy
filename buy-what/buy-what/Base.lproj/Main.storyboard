@@ -8,7 +8,6 @@
         <!--Item 2-->
         <scene sceneID="rYH-zT-AdM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w50-Ut-i8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="FKN-XW-Aof" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mmu-mN-TTC"/>
@@ -21,6 +20,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="XgP-y9-ygk"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w50-Ut-i8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="633.5" y="1320.5"/>
         </scene>
