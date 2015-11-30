@@ -119,9 +119,17 @@
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIU-Uj-iIe">
                                                     <rect key="frame" x="195" y="4" width="177" height="69"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="woI-93-Q8Z" appends="YES" id="Jpn-3U-yMW"/>
+                                                    </connections>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zr6-Ck-T7A">
                                                     <rect key="frame" x="195" y="76" width="177" height="69"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="h76-l2-Uu8" appends="YES" id="rq6-k6-HUw"/>
+                                                    </connections>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -198,6 +206,16 @@
                 <tapGestureRecognizer id="NQM-eO-akm">
                     <connections>
                         <action selector="abc:" destination="UGg-NR-VzS" id="mFD-6w-DzK"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="h76-l2-Uu8">
+                    <connections>
+                        <action selector="abc2:" destination="UGg-NR-VzS" id="jvg-wc-Ove"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="woI-93-Q8Z">
+                    <connections>
+                        <action selector="abc3:" destination="UGg-NR-VzS" id="1c1-xW-rWa"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

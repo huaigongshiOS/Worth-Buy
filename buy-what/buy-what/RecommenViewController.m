@@ -19,6 +19,9 @@
 {
     int limit;
     BOOL tag;
+    NSString *str;
+    NSString *str1;
+    NSString *str2;
 }
 @end
 
@@ -47,6 +50,7 @@
     tag = NO;
     _TableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+           
             [_TableView reloadData];
             [_TableView.mj_header endRefreshing];
         });
@@ -55,6 +59,7 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             limit += 20;
             [self analysisArticle];
+            
              [_TableView reloadData];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [_TableView.mj_footer endRefreshing];
@@ -122,9 +127,17 @@
         StyleOneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"style1"];
         if (tag == NO) {
             Banner *ban = [_bannerlist objectAtIndex:0];
+            Banner *ban1 = [_bannerlist objectAtIndex:1];
+            Banner *ban2 = [_bannerlist objectAtIndex:2];
             if (ban) {
             cell.Banner1.userInteractionEnabled = YES;
+            cell.Banner2.userInteractionEnabled = YES;
+            cell.Banner3.userInteractionEnabled = YES;
             }
+            
+            str= ban.link;
+            str1 = ban1.link;
+            str2 = ban2.link;
             cell.Banner1.layer.masksToBounds = YES;
             cell.Banner1.layer.borderColor = [[UIColor blackColor] CGColor];
             cell.Banner1.layer.borderWidth = 1.0f;
@@ -138,13 +151,9 @@
             cell.Banner3.layer.borderWidth = 1.0f;
             cell.Banner3.layer.cornerRadius = 5;
             [cell.Banner1 sd_setImageWithURL:[NSURL URLWithString:ban.img]];
-            Banner *ban1 = [_bannerlist objectAtIndex:1];
             [cell.Banner2 sd_setImageWithURL:[NSURL URLWithString:ban1.img]];
-            Banner *ban2 = [_bannerlist objectAtIndex:2];
             [cell.Banner3 sd_setImageWithURL:[NSURL URLWithString:ban2.img]];
-
         }
-        
         return cell;
     }
     else{
@@ -171,7 +180,13 @@
     return 100;
 }
 - (IBAction)abc:(id)sender {
-    NSLog(@"123");
+    _request = [NSURLRequest requestWithURL:[NSURL URLWithString:str]];
+    
+    WebViewController *web = [[WebViewController alloc] init];
+    
+    web.request = _request;
+    //    [self.navigationController popToViewController:web animated:YES];
+    [self.navigationController pushViewController:web animated:YES];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -188,6 +203,24 @@
 //    [self.navigationController popToViewController:web animated:YES];
     [self.navigationController pushViewController:web animated:YES];
     }
+}
+- (IBAction)abc3:(UITapGestureRecognizer *)sender {
+     _request = [NSURLRequest requestWithURL:[NSURL URLWithString:str1]];
+    
+    WebViewController *web = [[WebViewController alloc] init];
+
+    web.request = _request;
+    //    [self.navigationController popToViewController:web animated:YES];
+    [self.navigationController pushViewController:web animated:YES];
+}
+- (IBAction)abc2:(id)sender {
+    _request = [NSURLRequest requestWithURL:[NSURL URLWithString:str2]];
+    
+    WebViewController *web = [[WebViewController alloc] init];
+
+    web.request = _request;
+    //    [self.navigationController popToViewController:web animated:YES];
+    [self.navigationController pushViewController:web animated:YES];
 }
 
 /*

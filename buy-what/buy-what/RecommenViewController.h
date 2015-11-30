@@ -14,4 +14,5 @@
 @property (nonatomic,strong) NSMutableArray *articlelist;
 @property (nonatomic,strong) NSURLRequest *request;
 @property (nonatomic,strong) UIWebView *Detail;
+@property (nonatomic,strong) NSMutableArray *bannerlink;
 @end
