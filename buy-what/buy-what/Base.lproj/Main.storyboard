@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mZ4-dh-N9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mZ4-dh-N9r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <scenes>
         <!--Item 2-->
         <scene sceneID="rYH-zT-AdM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w50-Ut-i8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="FKN-XW-Aof" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mmu-mN-TTC"/>
@@ -21,6 +19,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="XgP-y9-ygk"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w50-Ut-i8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="633.5" y="1320.5"/>
         </scene>
